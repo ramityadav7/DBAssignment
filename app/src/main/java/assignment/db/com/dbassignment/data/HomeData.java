@@ -1,6 +1,7 @@
 package assignment.db.com.dbassignment.data;
 
 public class HomeData {
+    private String contactId;
     private String stagingId;
     private String context;
     private String status;
@@ -36,5 +37,13 @@ public class HomeData {
 
     public void setUserId(String userId) {
         this.userId = userId;
+    }
+
+    public String getContactId() {
+        return contactId;
+    }
+
+    public void setContactId(String contactId) {
+        this.contactId = contactId;
     }
 }

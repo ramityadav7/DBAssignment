@@ -1,5 +1,7 @@
 package assignment.db.com.dbassignment.utils;
 
+import android.database.Cursor;
+
 import java.util.Collection;
 
 public class AppUtils {
@@ -12,5 +14,21 @@ public class AppUtils {
         }
 
         return false;
+    }
+
+    public static void closeCursor(Cursor cursor)
+    {
+        if (cursor != null && !cursor.isClosed())
+        {
+            try
+            {
+                cursor.close();
+            }
+            catch (Exception e)
+            {
+                //Do Nothing
+                e.printStackTrace();
+            }
+        }
     }
 }
