@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">DB Assignment</string>
     <string name="action_settings">Settings</string>
+
+    <string name="label_staging_id">Staging Id</string>
+    <string name="label_context">Context</string>
+    <string name="label_status">Status</string>
+    <string name="label_user_id">User Id</string>
 </resources>

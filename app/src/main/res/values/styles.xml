@@ -17,4 +17,17 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="HeadingTextStyle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/list_text_size</item>
+        <item name="android:textColor">@color/colorHeading</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ItemTextStyle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/list_text_size</item>
+        <item name="android:textColor">@color/colorHeading</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
 </resources>

@@ -1,20 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".HomeActivity"
+    tools:context=".home.HomeActivity"
     tools:showIn="@layout/activity_home">
 
-    <TextView
+    <Spinner
+        android:id="@+id/spinnerContactId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/item_margin"
+        android:layout_marginBottom="@dimen/item_margin"
+        android:visibility="gone">
 
-</android.support.constraint.ConstraintLayout>
+    </Spinner>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/item_margin"
+        android:layout_marginBottom="@dimen/item_margin"
+        android:layout_below="@+id/spinnerContactId"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/label_staging_id"
+            style="@style/HeadingTextStyle"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/label_context"
+            style="@style/HeadingTextStyle"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/label_status"
+            style="@style/HeadingTextStyle"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/label_user_id"
+            style="@style/HeadingTextStyle"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayoutHeader"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textViewStagingId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/ItemTextStyle"/>
+
+        <TextView
+            android:id="@+id/textViewContext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/ItemTextStyle"/>
+
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/ItemTextStyle"/>
+
+        <TextView
+            android:id="@+id/textViewUserId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/ItemTextStyle"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+
+</RelativeLayout>
