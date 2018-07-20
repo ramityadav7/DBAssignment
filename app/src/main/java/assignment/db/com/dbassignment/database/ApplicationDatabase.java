@@ -58,10 +58,9 @@ public class ApplicationDatabase {
     //Create Table Accounts SQL
     private static final String CREATE_TABLE_ACCOUNTS = "CREATE TABLE IF NOT EXISTS "  + TABLE_NAME_ACCOUNTS
             + "("
-            + COLUMN_NAME_ID + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "
+            + COLUMN_CONTEXT_ACCOUNTS + " TEXT PRIMARY KEY NOT NULL, "
             + COLUMN_STATUS + " TEXT NOT NULL, "
-            + COLUMN_USER_ID + " TEXT NOT NULL, "
-            + COLUMN_CONTEXT_ACCOUNTS + " TEXT NOT NULL"
+            + COLUMN_USER_ID + " TEXT NOT NULL"
             + ")";
 
     //Constructor

@@ -243,7 +243,11 @@ public class DBManager {
             accountContentValues.put(ApplicationDatabase.COLUMN_USER_ID, accountsData.getUserId());
             accountContentValues.put(ApplicationDatabase.COLUMN_CONTEXT_ACCOUNTS, accountContext);
 
-            result = sqliteDatabase.insert(ApplicationDatabase.TABLE_NAME_ACCOUNTS, null, accountContentValues);
+            result = sqliteDatabase.update(ApplicationDatabase.TABLE_NAME_ACCOUNTS, accountContentValues, ApplicationDatabase.COLUMN_CONTEXT_ACCOUNTS+" =?", new String[] {accountContext});
+
+            if(result == 0) {
+                result = sqliteDatabase.insert(ApplicationDatabase.TABLE_NAME_ACCOUNTS, null, accountContentValues);
+            }
         }
         catch(Exception exception) {
         }
